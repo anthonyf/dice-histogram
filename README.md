@@ -1,36 +1,20 @@
 # dice-histogram
 
-FIXME: description
+    dice-histogram.core> (print-histogram (dice-histogram [6 6 6]))
+     3: #
+     4: ###
+     5: ######
+     6: ##########
+     7: ###############
+     8: #####################
+     9: #########################
+    10: ###########################
+    11: ###########################
+    12: #########################
+    13: #####################
+    14: ###############
+    15: ##########
+    16: ######
+    17: ###
+    18: #
 
-## Installation
-
-Download from http://example.com/FIXME.
-
-## Usage
-
-FIXME: explanation
-
-    $ java -jar dice-histogram-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2017 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
