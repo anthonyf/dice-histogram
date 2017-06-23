@@ -16,7 +16,7 @@
       10: ###
 
 
-## All possible rolls of 2d6
+## All possible rolls of 3d6
 
     dice-histogram.core> (print-histogram (dice-histogram [6 6 6]))
      3: #
