@@ -1,5 +1,23 @@
 # dice-histogram
 
+## Simulate 200 2d6 rolls
+
+    dice-histogram.core> (print-histogram (simulate-rolls [6 6] 200))
+       0: #####
+       1: ###########
+       2: #####################
+       3: #####################
+       4: ###################################
+       5: ################################
+       6: ######################
+       7: ##################
+       8: #####################
+       9: ###########
+      10: ###
+
+
+## All possible rolls of 2d6
+
     dice-histogram.core> (print-histogram (dice-histogram [6 6 6]))
      3: #
      4: ###

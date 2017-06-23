@@ -38,14 +38,32 @@
                    (assoc acc sum (inc (or (acc sum)
                                            0)))))
                {})
-       (map vec)
-       (sort-by first)
-       vec))
+       (into (sorted-map))
+       (into [])))
 
 
 #_ (dice-histogram [6 6])
 ;; => [[2 1] [3 2] [4 3] [5 4] [6 5] [7 6] [8 5] [9 4] [10 3] [11 2] [12 1]]
 
+
+(defn simulate-rolls
+  "Simulate a number of dice rolls with the given dice and return a histogram."
+  [dice num-of-rolls]
+  (->> (range num-of-rolls)
+       (reduce (fn [acc roll-number]
+                 (let [sum (reduce (fn [acc die]
+                                      (+ acc (rand-int die)))
+                                    0
+                                    dice)]
+                   (assoc acc sum
+                          (inc (or (acc sum)
+                                   0)))))
+               {})
+       (into (sorted-map))
+       (into [])))
+
+#_ (simulate-rolls [6 6] 10)
+;; => [[2 1] [3 2] [4 1] [5 2] [6 2] [7 1] [8 1]]
 
 (defn print-histogram
   "Prints a histogram graphically."
